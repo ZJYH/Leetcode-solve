@@ -2,6 +2,7 @@ package com.zh.leetcode.array;
 
 
 import java.util.HashMap;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -39,11 +40,26 @@ public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum numSum = new TwoSum();
-        int[] ints = numSum.twoSum(new int[]{2, 11, 23, 62, 5, 34, 22, 11}, 16);
+        int[] ints = numSum.twoSum2(new int[]{2, 11, 23, 62, 5, 34, 22, 11}, 16);
         System.out.println("-----------------------------");
         for (int anInt : ints) {
             System.out.println(anInt);
         }
+    }
+
+    public int[] twoSum2(int[] nums ,int target){
+        int[] indexs = new int[2];
+
+        for (int i = 0; i <nums.length ; i++) {
+            for (int j = 0; j <nums.length ; j++) {
+                if(target == nums[i]+nums[j]){
+                    indexs[0]=i;
+                    indexs[1]=j;
+                    return indexs;
+                }
+            }
+        }
+        return indexs;
     }
 
 }
