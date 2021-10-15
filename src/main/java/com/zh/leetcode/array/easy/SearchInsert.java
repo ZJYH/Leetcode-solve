@@ -1,4 +1,4 @@
-package com.zh.leetcode.array;
+package com.zh.leetcode.array.easy;
 
 import javax.sound.midi.Soundbank;
 import java.util.Vector;

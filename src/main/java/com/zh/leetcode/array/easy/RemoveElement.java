@@ -1,4 +1,4 @@
-package com.zh.leetcode.array;
+package com.zh.leetcode.array.easy;
 
 /**
  * 给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
@@ -39,5 +39,23 @@ public class RemoveElement {
             q++;
         }
         return p;
+    }
+
+    public static int removeElement2(int[] nums, int val){
+        int p=0;
+        int q=0;
+        while (q<nums.length){
+            if(val != nums[q]){
+                nums[p]=nums[q];
+                p++;
+            }
+            q++;
+        }
+        return p;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(removeElement2(new int[]{1, 2, 2, 4, 2, 5, 2, 8,2,2}, 2));
     }
 }

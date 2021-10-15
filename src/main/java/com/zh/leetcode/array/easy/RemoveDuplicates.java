@@ -1,7 +1,5 @@
-package com.zh.leetcode.array;
+package com.zh.leetcode.array.easy;
 
-
-import java.util.*;
 
 /**
  * 删除排序数组中的重复项

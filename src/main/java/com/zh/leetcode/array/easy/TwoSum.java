@@ -1,8 +1,7 @@
-package com.zh.leetcode.array;
+package com.zh.leetcode.array.easy;
 
 
 import java.util.HashMap;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -40,7 +39,7 @@ public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum numSum = new TwoSum();
-        int[] ints = numSum.twoSum2(new int[]{2, 11, 23, 62, 5, 34, 22, 11}, 16);
+        int[] ints = numSum.twoSum2(new int[]{-2, 11, 23, 62, 5, 34, 22, 18}, 16);
         System.out.println("-----------------------------");
         for (int anInt : ints) {
             System.out.println(anInt);
