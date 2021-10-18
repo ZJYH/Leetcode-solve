@@ -16,7 +16,7 @@ public class SearchInsert {
      * @param target
      * @return
      */
-    public int searchInsert(int[] nums, int target) {
+    public static int searchInsert(int[] nums, int target) {
         int p=0;
         int q=0;
         while(p<nums.length){
@@ -33,13 +33,12 @@ public class SearchInsert {
     public static int searchInsert3(int[] nums, int target){
 
         int q=0;
-        while (q<nums.length){
+        while (q<nums.length-1){
 
             if(target==nums[q]){
                 return q;
             }
-
-            if(target>nums[q]){
+            else if(target>nums[q]){
                 q+=1;
             }
 
@@ -47,9 +46,26 @@ public class SearchInsert {
                 return q;
             }
         }
-        return q;
+        return q+1;
     }
 
+
+    public static int searchInsert4(int[] nums, int target){
+        int left =0;
+        int right =nums.length-1;
+        int mid=0;
+        while (left<right){
+            mid =left+(right-left)/2;
+            if (target == nums[mid]) {
+                return mid;
+            }else if(target>nums[mid]){
+                left=mid+1;
+            }else {
+                right=mid-1;
+            }
+        }
+        return left;
+    }
 
 
     /**
@@ -58,7 +74,7 @@ public class SearchInsert {
      * @param target
      * @return
      */
-    public int searchInsert2(int[] nums, int target) {
+    public static int searchInsert2(int[] nums, int target) {
         int n =nums.length;
         int left = 0;
         int right =n-1;
@@ -78,7 +94,7 @@ public class SearchInsert {
 
     public static void main(String[] args) {
         int[] ints = {1, 5, 7, 9};
-        System.out.println(searchInsert3(ints, 5));
+        System.out.println(searchInsert3(ints, 0));
     }
 
 }
