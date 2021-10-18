@@ -30,6 +30,28 @@ public class SearchInsert {
     return q;
     }
 
+    public static int searchInsert3(int[] nums, int target){
+
+        int q=0;
+        while (q<nums.length){
+
+            if(target==nums[q]){
+                return q;
+            }
+
+            if(target>nums[q]){
+                q+=1;
+            }
+
+            if(target<nums[q]){
+                return q;
+            }
+        }
+        return q;
+    }
+
+
+
     /**
      * 解法2：二分法查找插入,时间复杂度O(log n)
      * @param nums
@@ -55,8 +77,8 @@ public class SearchInsert {
     }
 
     public static void main(String[] args) {
-        int i =5/2;
-        System.out.println(i);
+        int[] ints = {1, 5, 7, 9};
+        System.out.println(searchInsert3(ints, 5));
     }
 
 }
