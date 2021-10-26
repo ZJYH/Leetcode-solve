@@ -37,7 +37,8 @@ public class MedianOfArray {
 
     }
 
-    public Integer deal(int[] nums1,int[] nums2) {
+    public double deal(int[] nums1,int[] nums2) {
+
 
         return 0;
     }
