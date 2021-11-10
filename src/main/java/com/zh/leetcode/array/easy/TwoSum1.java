@@ -16,7 +16,7 @@ import java.util.HashMap;
  * 所以返回 [0, 1]
  *
  */
-public class TwoSum {
+public class TwoSum1 {
 
     public int[] twoSum(int[] nums, int target) {
 
@@ -38,7 +38,7 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        TwoSum numSum = new TwoSum();
+        TwoSum1 numSum = new TwoSum1();
         int[] ints = numSum.twoSum2(new int[]{-2, 11, 23, 62, 5, 34, 22, 18}, 16);
         System.out.println("-----------------------------");
         for (int anInt : ints) {

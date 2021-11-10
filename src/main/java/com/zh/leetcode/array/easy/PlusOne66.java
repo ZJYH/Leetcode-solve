@@ -34,7 +34,7 @@ import java.util.Arrays;
  * @author zhanghao
  * @date 2021-11-09
  */
-public class PlusOne {
+public class PlusOne66 {
 
     public static void main(String[] args) {
         int[] s ={1,3,4};
@@ -43,15 +43,11 @@ public class PlusOne {
     }
 
     public static int[] plusOne(int[] in){
-        StringBuilder s =new StringBuilder();
-
-        int[] a =new int[in.length];
         int[] b =new int[1];
-        for (int i=0; i<in.length; i++){
-            a[i]= in[i];
-            b[0]= in[i];
+        for (int value : in) {
+            b[0] = value;
         }
-        a[in.length - 1] = b[0]+1;
-        return a;
+        in[in.length - 1] = b[0]+1;
+        return in;
     }
 }
