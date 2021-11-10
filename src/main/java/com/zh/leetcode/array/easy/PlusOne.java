@@ -1,5 +1,7 @@
 package com.zh.leetcode.array.easy;
 
+import java.util.Arrays;
+
 /**
  *
  * 给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
@@ -36,17 +38,20 @@ public class PlusOne {
 
     public static void main(String[] args) {
         int[] s ={1,3,4};
-        int i = plusOne(s);
-        System.out.println(i);
+        int[] ints = plusOne(s);
+        System.out.println(Arrays.toString(ints));
     }
 
-    public static int plusOne(int[] in){
+    public static int[] plusOne(int[] in){
         StringBuilder s =new StringBuilder();
-        int[] a = new int[1];
-        for (int value : in) {
 
-            s.append(value);
+        int[] a =new int[in.length];
+        int[] b =new int[1];
+        for (int i=0; i<in.length; i++){
+            a[i]= in[i];
+            b[0]= in[i];
         }
-        return Integer.parseInt(s.toString())+1;
+        a[in.length - 1] = b[0]+1;
+        return a;
     }
 }
