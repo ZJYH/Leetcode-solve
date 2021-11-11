@@ -37,17 +37,23 @@ import java.util.Arrays;
 public class PlusOne66 {
 
     public static void main(String[] args) {
-        int[] s ={1,3,4};
+        int[] s ={0};
         int[] ints = plusOne(s);
         System.out.println(Arrays.toString(ints));
     }
 
     public static int[] plusOne(int[] in){
         int[] b =new int[1];
-        for (int value : in) {
-            b[0] = value;
+        for (int i =in.length-1 ;i>=0 ; i--) {
+            if(in[i]==9){
+                in[i]=0;
+            }else {
+                in[i]+=1;
+                return in;
+            }
         }
-        in[in.length - 1] = b[0]+1;
-        return in;
+        int[] out =new int[in.length+1];
+        out[0]=1;
+        return out;
     }
 }
