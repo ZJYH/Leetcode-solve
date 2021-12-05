@@ -30,14 +30,13 @@ package com.zh.leetcode.array.easy;
  * 合并结果是 [1] 。
  * 注意，因为 m = 0 ，所以 nums1 中没有元素。nums1 中仅存的 0 仅仅是为了确保合并结果可以顺利存放到 nums1 中。
  *
- * 来源：力扣（LeetCode）
- * 链接：https://leetcode-cn.com/problems/merge-sorted-array
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- *
  * @author zhanghao
  * @date 2021-10-18
  */
-public class MergeArray {
+public class MergeArray88 {
+
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
 
 
+    }
 }
